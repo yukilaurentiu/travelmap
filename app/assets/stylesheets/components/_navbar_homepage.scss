@@ -1,9 +1,9 @@
-.navbar-lewagon {
+.header {
   justify-content: space-between;
   background: transparent;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0.8rem;
   transition: 0.5s background-color ease;
+  flex-grow: 0;
 }
 
 .nav-item-hp {
@@ -11,6 +11,8 @@
   font-size: 17px;
 
   a {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     &:hover {
       color: $peach;
     }
@@ -34,27 +36,12 @@
   height: auto;
 }
 
-.navbar-lewagon-peach {
-  background-color: $peach;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+.navbar-brand img {
   width: 50px;
 }
 
 .icon-camera a {
   all: unset;
-}
-
-.navbar-collapse {
-  a {
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
 }
 
 .form-control {
