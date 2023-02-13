@@ -1,4 +1,4 @@
-<header class="header-pages navbar-expand-sm navbar-light navbar-pages"
+<header class="header-pages navbar-light navbar-pages"
   data-controller="navbar"
   data-action="scroll@window->navbar#updateNavbar"
 >
@@ -13,13 +13,12 @@
           <%= button_tag icon('fa-solid', 'magnifying-glass'), class: "btn-search" %>
         <% end %>
       </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> %>
 
-    <nav class="navbar" id="navbarSupportedContent">
-
-      <ul class="navbar-nav">
+    <nav class="nav" id="navbarSupportedContent">
+      <ul class="navbar-list">
         <% if user_signed_in? %>
           <li class="nav-item">
             <li class="nav-item" title="Posts Worldwide">

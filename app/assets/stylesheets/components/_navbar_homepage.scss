@@ -1,9 +1,20 @@
 .header {
+  display: flex;
   justify-content: space-between;
   background: transparent;
   padding: 0.8rem;
   transition: 0.5s background-color ease;
-  flex-grow: 0;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem ;
+  list-style: none;
+}
+
+.navbar-list li:last-child {
+  padding-left: 12px;
 }
 
 .nav-item-hp {
@@ -20,19 +31,23 @@
 }
 
 .searchbar {
+  display: flex;
+  align-items: center;
+  
   input {
     border: none;
   }
 
   input::placeholder {
-    font-size: 13px;
+    padding:0.1rem;
+    font-size: 1rem;
     font-weight: 400;
     opacity: .7;
   }
 }
 
 #logo-navbar-hp {
-  width: 66px;
+  width: 4.5rem;
   height: auto;
 }
 
