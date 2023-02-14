@@ -1,12 +1,14 @@
 .btn-peach {
   color: white;
-  padding: 8px 24px;
+  padding: 0.5rem 2rem;
   border: 1px solid $peach;
-  border-radius: 50px;
+  border-radius: 5rem;
   background-color: $peach;
   font-weight: 400;
   text-decoration: none;
   transition: background 70ms ease-in-out;
+  display:flex;
+  justify-self: flex-end;
 
   &:hover {
     background-color: $dark-peach;

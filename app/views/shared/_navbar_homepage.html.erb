@@ -3,22 +3,25 @@
   data-action="scroll@window->navbar#updateNavbar"
 >
 
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "logo-peach.png", id: "logo-navbar-hp" %>
-    <% end %>
-      <div class="searchbar">
-        <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query, params[:query],
-          class: "form-control", placeholder: "Search city, ..."%>
-          <%= button_tag icon('fa-solid', 'magnifying-glass'), class: "btn-search-hp" %>
+    <nav class="box">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "logo-peach.png", id: "logo-navbar" %>
+      <% end %>
+    </nav>
 
-        <% end %>
-      </div>
+    <div class="searchbar box">
+      <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query, params[:query],
+        class: "form-control", placeholder: "Search city, ..."%>
+        <%= button_tag icon('fa-solid', 'magnifying-glass'), class: "btn-search-hp" %>
+
+      <% end %>
+    </div>
     <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button> %>
 
-    <nav class="nav" id="navbarSupportedContent">
+    <nav class="nav box" id="navbarSupportedContent">
       <ul class="navbar-list">
         <% if user_signed_in? %>
           <li class="nav-item">
@@ -34,7 +37,7 @@
             <li class="nav-item nav-item-hp" title="My Wishlist">
               <%= link_to icon('fa-solid', 'bookmark'), wishlists_path, class: "nav-link" %>
             </li>
-            <li class="nav-item nav-item-hp" title="Events" id="last-nav-item">
+            <li class="nav-item nav-item-hp" title="Events">
               <%= link_to icon('fa-regular', 'calendar'), events_path, class: "nav-link" %>
             </li>
           </li>

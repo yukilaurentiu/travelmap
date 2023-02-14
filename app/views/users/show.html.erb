@@ -15,8 +15,9 @@
           <div class="d-flex justify-content-center">
             <div class="card rounded">
               <div class="p-2" >
+                <%# TODO %>
                 <% post.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, class: "card-img" %>
+                  <%= image_tag "sample_img.jpg", class: "card-image" %> 
                 <% end %>
               </div>
               <div class="card-infos">
