@@ -14,7 +14,8 @@
           <div class="card rounded">
             <div class="p-2" style="height: 330px">
               <% post.photos.each do |photo| %>
-                <%= image_tag "avatar.png", class: "card-image" %>
+                <%# TODO %>
+                <%= image_tag "sample_img.jpg", class: "card-image" %> 
               <% end %>
               <div class="card-infos mt-3">
                 <h2 class="mb-1 title-btn" data-bs-toggle="modal" data-bs-target="#modal_<%= dom_id(post) %>"><%= post.title %></h2>
