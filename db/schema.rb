@@ -76,8 +76,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_141828) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.datetime "start_time", precision: nil
-    t.datetime "end_time", precision: nil
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.bigint "user_id", null: false
     t.bigint "city_id", null: false
     t.datetime "created_at", null: false
