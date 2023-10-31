@@ -1,15 +1,13 @@
 .navbar-pages {
   justify-content: space-between;
   background: $peach;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0.8rem;
   transition: 0.5s background-color ease;
-  height: 90px;
 }
 
 .nav-item {
   padding: 0 1px;
-  font-size: 17px;
+  font-size: 1.2rem;
 
   a {
     &:hover {

@@ -1,14 +1,13 @@
-.navbar-lewagon {
+.navbar-home {
   justify-content: space-between;
   background: transparent;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0.8rem;
   transition: 0.5s background-color ease;
 }
 
 .nav-item-hp {
   padding: 0 1px;
-  font-size: 17px;
+  font-size: 1.2rem;
 
   a {
     &:hover {
@@ -23,7 +22,7 @@
   }
 
   input::placeholder {
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 400;
     opacity: .7;
   }
@@ -38,11 +37,11 @@
   background-color: $peach;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-home .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-home .navbar-brand img {
   width: 50px;
 }
 
