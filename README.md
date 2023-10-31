@@ -41,11 +41,6 @@ implement seeds again (in seeds.rb file, adds 'puts "delete DB"' for destroying 
 rails db:seed:replant
 ```
 
-<h3>compile SCSS </h3>
-
-```
-rake assets:precompile
-``` 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 <a href="https://guides.rubyonrails.org/active_storage_overview.html">Active Storage</a>
