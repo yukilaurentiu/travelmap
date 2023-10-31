@@ -1,4 +1,13 @@
 // Specific CSS for your home-page
+
+.html {
+  font-size: 62.5%;
+}
+
+.navbar-list li:last-child {
+  padding-left: 1.2rem;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -10,7 +19,7 @@
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-family: 'Paytone One', sans-serif;
-  font-size: 54px;
+  font-size: 5.4rem;
   font-weight: bold;
 }
 

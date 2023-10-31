@@ -1,25 +1,25 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-pages"
+<header class="header-pages navbar-light navbar-pages"
   data-controller="navbar"
   data-action="scroll@window->navbar#updateNavbar"
 >
-  <div class="container-fluid">
+  <nav class="box">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "logo-dark-teal.png", id: "logo-navbar" %>
     <% end %>
-      <div class="searchbar">
-        <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query, params[:query],
-          class: "form-control", placeholder: "Search category, ..."%>
-          <%= button_tag icon('fa-solid', 'magnifying-glass'), class: "btn-search" %>
-        <% end %>
-      </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  </nav>
+    <div class="searchbar box">
+      <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
+       <%= text_field_tag :query, params[:query],
+         class: "form-control", placeholder: "Search category, ..."%>
+       <%= button_tag icon('fa-solid', 'magnifying-glass'), class: "btn-search" %>
+      <% end %>
+    </div>
+    <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> %>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav me-auto">
+    <nav class="nav box" id="navbarSupportedContent">
+      <ul class="navbar-list">
         <% if user_signed_in? %>
           <li class="nav-item">
             <li class="nav-item" title="Posts Worldwide">
@@ -34,7 +34,7 @@
             <li class="nav-item" title="My Wishlist">
               <%= link_to icon('fa-solid', 'bookmark'), wishlists_path, class: "nav-link" %>
             </li>
-            <li class="nav-item" title="Events" id="last-nav-item">
+            <li class="nav-item" title="Events">
               <%= link_to icon('fa-regular', 'calendar'), events_path, class: "nav-link" %>
             </li>
           </li>
@@ -50,6 +50,6 @@
           </li>
         <% end %>
       </ul>
-    </div>
-  </div>
-</div>
+    </nav>
+  
+</header>

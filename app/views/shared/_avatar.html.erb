@@ -1,5 +1,6 @@
+<%# TODO %>
 <% if post.user.avatar.present? %>
- <%= cl_image_tag post.user.avatar.key, class: "avatar dropdown-toggle" %>
+ <img scr="<%=(url_for(post.user.avatar))%>", class="avatar dropdown-toggle">
 <% else %>
   <%= image_tag "avatar.png", class: "avatar dropdown-toggle" %>
 <% end %>

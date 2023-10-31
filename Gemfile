@@ -6,7 +6,7 @@ ruby "3.2.2"
 # Added gems
 gem "pundit"
 gem "devise"
-gem "cloudinary"
+# gem "cloudinary"
 
 gem "geocoder"
 gem "pg_search"

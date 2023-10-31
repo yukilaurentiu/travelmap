@@ -1,49 +1,38 @@
-.navbar-pages {
+.header-pages {
+  display:flex;
   justify-content: space-between;
   background: $peach;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0.8rem;
   transition: 0.5s background-color ease;
   height: 90px;
 }
 
+.navbar-list {
+  display: flex;
+  list-style: none;
+  margin-top: 10px;
+  align-content: center;
+}
+
 .nav-item {
-  padding: 0 1px;
-  font-size: 17px;
+  font-size: 1.2rem;
 
   a {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     &:hover {
       color: $dark-teal;
     }
   }
 }
 
-#last-nav-item {
-  padding-right: 12px;
-}
-
 #logo-navbar {
-  width: 66px;
+  width: 4.5rem;
   height: auto;
-}
-
-.navbar-pages .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-pages .navbar-brand img {
-  width: 50px;
 }
 
 .icon-camera a {
   all: unset;
-}
-
-.navbar-collapse {
-  a {
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
 }
 
 .dropdown-menu {
