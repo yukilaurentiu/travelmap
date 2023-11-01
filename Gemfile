@@ -1,13 +1,12 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "3.2.2"
 
 # Added gems
 gem "pundit"
 gem "devise"
 gem "cloudinary"
-
 
 gem "geocoder"
 gem "pg_search"
