@@ -3,7 +3,8 @@
     <h1> <%= @event.name %> </h1>
     <div class="host d-flex gap-2 align-items-center">
       <h2 class="mt-1 mb-2">Hosted by</h2>
-      <%= cl_image_tag @event_owner.avatar.key, class: "avatar-host" %>
+      <%= image_tag(url_for(@event_owner.avatar), class: "avatar-host") %>
+
     </div>
   </div>
 
@@ -45,7 +46,7 @@
         <p>Participants (<%= @event.attendances.count %>):</p>
         <div class="avatar-participants-wrapper">
           <% @participants.each do |participant|  %>
-            <%= cl_image_tag participant.avatar.key, class: "avatar-participant" %>
+            <%= image_tag(url_for(participant.avatar), class: "avatar-participant") %>
           <% end %>
         </div>
     </div>

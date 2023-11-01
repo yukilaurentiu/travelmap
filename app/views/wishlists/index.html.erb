@@ -1,5 +1,5 @@
-<div class="d-flex mb-5">
-  <div id="map-sticky" style="min-width: 45%; height: 700px;"
+<div class="d-flex">
+  <div id="map-sticky" style="min-width: 60%; height: 44rem;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -15,7 +15,8 @@
           <div class="card rounded">
               <div class="p-2">
                 <% bookmark.post.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, class: "card-image" %>
+                  <%= image_tag(url_for(photo), class: "card-image") %>
+                
                 <% end %>
               </div>
               <div class="card-infos d-flex justify-content-between align-items-center">

@@ -2,7 +2,6 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
@@ -30,18 +29,19 @@ Post.create(
   address: "Tower Bridge Rd, London SE1 2UP, United Kingdom",
   title: "What a beautiful Landmark!",
   category: "Best spots",
-  description: "Tower Bridge, the most photographed landmark,
-                is one of the most popular tourist attractions in one of the world`s most popular tourist destinations,
-                the historic city London."
+  description: "This historic gem located in the heart of London is an absolute must-see. 
+                It's an iconic testament to the city's rich history, 
+                standing proudly as a symbol of its heritage. "
 )
 
 Post.create(
   user_id: "1",
   city_id: "1",
-  address: "London SW1A 0AA, United Kingdom",
-  title: "Impressive piece of art!",
-  category: "Best spots",
-  description: "You've seen it on TV a thousand times, see it in person! A beautiful work of art"
+  address: "Great Russell St, London WC1B 3DG, United Kingdom",
+  title: "Impressive museum!",
+  category: "Art&Culture",
+  description: "A very nice place to visit if you want to see various types of 
+                monuments from different countries and  from different Eras."
 )
 
 Post.create(
@@ -66,11 +66,11 @@ Post.create(
 Post.create(
   user_id: "1",
   city_id: "4",
-  address: "0891 Oslo, Norway",
-  title: "A beautiful spot for short-hiking!",
-  category: "outdoors",
-  description: "Amazing lake and park for nature lovers.
-                An excellent place for disconnecting from the day-to-day routine."
+  address: "Bankplassen 1, 0151 Oslo, Norway",
+  title: "the oldest cafe, Engebret Cafe",
+  category: "Restaurants",
+  description: "A very Norwegian atmosphere with traditional food, very tasty fish soup and salmon, 
+                traditional appearance and calm atmosphere. "
 )
 
 Post.create(

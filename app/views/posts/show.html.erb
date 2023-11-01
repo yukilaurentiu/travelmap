@@ -2,7 +2,7 @@
   <div class="card-with-map rounded">
     <div class="p-2" >
       <% @post.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, class: "card-image" %>
+        <%= image_tag(url_for(photo), class: "card-image") %>
       <% end %>
       <div class="card-infos mt-3 d-flex justify-content-between">
         <div>
@@ -11,7 +11,7 @@
           <h4 class="mb-3"><%= @post.address %></h4>
           <p><%= @post.description %></p>
             <% if @post.user.avatar.present? %>
-              <%= cl_image_tag @post.user.avatar.key, class: "avatar dropdown-toggle" %>
+              <%= image_tag(url_for(@post.user.avatar), class: "avatar dropdown-toggle")%>
             <% else %>
               <%= image_tag "avatar.png", class: "avatar dropdown-toggle" %>
             <% end %>

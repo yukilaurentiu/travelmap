@@ -2,26 +2,25 @@
   data-controller="navbar"
   data-action="scroll@window->navbar#updateNavbar"
 >
-  <div class="container-fluid">
+  <nav class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "logo-peach.png", id: "logo-navbar-hp" %>
     <% end %>
-      <div class="searchbar">
+    
+      <nav class="searchbar">
         <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :query, params[:query],
-
           class: "form-control", placeholder: "Search city, ..."%>
           <%= button_tag icon('fa-solid', 'magnifying-glass'), class: "btn-search-hp" %>
-
         <% end %>
-      </div>
+      </nav>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <nav class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item">
             <li class="nav-item nav-item-hp" title="Posts Worldwide">
@@ -52,6 +51,6 @@
           </li>
         <% end %>
       </ul>
-    </div>
-  </div>
+    </nav>
+  </nav>
 </div>

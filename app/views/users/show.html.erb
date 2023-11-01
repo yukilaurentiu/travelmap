@@ -1,5 +1,5 @@
 <div class="d-flex">
-  <div style="min-width: 45%; height: 700px;"
+  <div style="min-width: 60%; height: 44rem;"
       data-controller="index-map"
       data-index-map-markers-value="<%= @markers.to_json %>"
       data-index-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -16,7 +16,7 @@
             <div class="card rounded">
               <div class="p-2" >
                 <% post.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, class: "card-img" %>
+                  <%= image_tag(url_for(photo), class: "card-img") %>
                 <% end %>
               </div>
               <div class="card-infos">
