@@ -1,8 +1,12 @@
 <div class="d-flex justify-content-center mt-3">
   <div class="card-with-map rounded">
     <div class="p-2" >
-      <% @post.photos.each do |photo| %>
-        <%= image_tag(url_for(photo), class: "card-image") %>
+      <% if @post.photos.present? %>
+        <% @post.photos.each do |photo| %>
+          <%= image_tag(url_for(photo), class: "modal-image") %>
+        <% end %>
+      <% else %>
+        <%= image_tag "/assets/sample_img.jpg", class: "modal-image" %>
       <% end %>
       <div class="card-infos mt-3 d-flex justify-content-between">
         <div>

@@ -13,8 +13,12 @@
         <div class="d-flex justify-content-center">
           <div class="card rounded">
             <div class="p-2" style="height: 330px">
-              <% post.photos.each do |photo| %>
-                <%= image_tag(url_for(photo), class: "card-image") %>
+              <% if post.photos.present? %>
+                <% post.photos.each do |photo| %>
+                  <%= image_tag(url_for(photo), class: "card-image") %>
+                <% end %>
+              <% else %>
+                <%= image_tag "/assets/sample_img.jpg", class: "card-image" %>
               <% end %>
               <div class="card-infos mt-3">
                 <h2 class="mb-1 title-btn" data-bs-toggle="modal" data-bs-target="#modal_<%= dom_id(post) %>"><%= post.title %></h2>
@@ -40,9 +44,14 @@
             <div class="d-flex justify-content-center mt-3">
               <div class="card-with-map rounded">
                 <div class="p-2" >
-                  <% post.photos.each do |photo| %>
-                     <%= image_tag(url_for(photo), class: "card-image") %>
-                  <% end %>
+                  <% if post.photos.present? %>
+                    <% post.photos.each do |photo| %>
+                      <%= image_tag(url_for(photo), class: "modal-image") %>
+                    <% end %>
+                    <% else %>
+                      <%= image_tag "/assets/sample_img.jpg", class: "modal-image" %>
+                    <% end %>
+                
                   <div class="card-infos mt-3 d-flex justify-content-between">
                     <div>
                       <h2 class="mb-1"><%= post.title %></h2>

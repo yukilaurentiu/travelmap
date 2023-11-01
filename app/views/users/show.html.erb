@@ -15,8 +15,12 @@
           <div class="d-flex justify-content-center">
             <div class="card rounded">
               <div class="p-2" >
-                <% post.photos.each do |photo| %>
-                  <%= image_tag(url_for(photo), class: "card-img") %>
+                <% if post.photos.present? %>
+                  <% post.photos.each do |photo| %>
+                    <%= image_tag(url_for(photo), class: "card-img") %>
+                  <% end %>
+                <% else %>
+                  <%= image_tag "/assets/sample_img.jpg", class: "card-img" %>
                 <% end %>
               </div>
               <div class="card-infos">

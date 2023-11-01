@@ -24,9 +24,21 @@
 }
 
 .card-image {
+  max-height: 200px;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.modal-image {
   max-height: 400px;
   width: 100%;
-  object-fit: fill;
+  object-fit:scale-down;
+}
+
+.card-img {
+  max-height: 150px;
+  width: 100%;
+  object-fit:scale-down;
 }
 
 .card-user-contant #post-img {
