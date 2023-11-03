@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   # validates :city, presence: true
   validates :title, presence: true
   validates :address, presence: true
+  validates :category, presence: true
 
   include PgSearch::Model
   pg_search_scope :global_search,

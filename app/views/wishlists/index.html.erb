@@ -26,6 +26,7 @@
                 <div>
                   <%= link_to post_path(bookmark.post) do %>
                     <h2><%= bookmark.post.title %></h2>
+                    <h3 class="mb-1 category"><%= bookmark.post.category %></h3>
                   <% end %>
                 </div>
                 <div>

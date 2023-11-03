@@ -11,7 +11,7 @@
     <% @posts.each do |post|  %>
       <div class="col-3">
         <div class="d-flex justify-content-center">
-          <div class="card rounded">
+          <div class="card rounded" data-bs-toggle="modal" data-bs-target="#modal_<%= dom_id(post) %>">
             <div class="p-2" style="height: 330px">
               <% if post.photos.present? %>
                 <% post.photos.each do |photo| %>
@@ -22,7 +22,7 @@
               <% end %>
               <div class="card-infos mt-3">
                 <h2 class="mb-1 title-btn" data-bs-toggle="modal" data-bs-target="#modal_<%= dom_id(post) %>"><%= post.title %></h2>
-                <h3 class="mb-1"><%= post.category %></h3>
+                <h3 class="mb-1 category"><%= post.category %></h3>
                 <h4 class="mb-3"><%= post.address %></h4>
                 <% unless post.user == current_user %>
                   <%= render(partial: "shared/bookmark", locals: {post: post}) %>
@@ -55,17 +55,14 @@
                   <div class="card-infos mt-3 d-flex justify-content-between">
                     <div>
                       <h2 class="mb-1"><%= post.title %></h2>
-                      <%# h3 with category was here replaced by Antonio for a button without link L17 %>
+                      <h3 class="mb-2 category"><%= post.category%></h3>
                       <h4 class="mb-3"><%= post.address %></h4>
                       <p><%= post.description %></p>
-
+                      
                     </div>
-                    <div class="d-flex align-items-end flex-column">
-                        <div class="p-2 pt-0">
+                    <div>
+                        <div class="m-2">
                           <%= render 'shared/avatar', post: post %>
-                        </div>
-                        <div class="p-2">
-                          <%= link_to post.category, "#", class: "btn-teal-outline"%>
                         </div>
 
                     </div>
