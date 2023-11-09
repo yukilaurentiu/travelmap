@@ -12,7 +12,9 @@ class PostsController < ApplicationController
       {
         lat: post.latitude,
         lng: post.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { post: post }),
+        city: post.city_id,
+        filter_cards: true,
+        # info_window: render_to_string(partial: "info_window", locals: { post: post }),
         image_url: helpers.asset_url("logo-peach.png")
       }
     end
@@ -22,15 +24,8 @@ class PostsController < ApplicationController
     @markers = [{
       lat: @post.latitude,
       lng: @post.longitude,
-      info_window: nil
+      image_url: helpers.asset_url("logo-peach.png")
     }]
-    # @markers = @post.geocoded.map do |post|
-    #   {
-    #     lat: post.latitude,
-    #     lng: post.longitude,
-    #     info_window: render_to_string(partial: "info_window", locals: { post: post })
-    #   }
-    # end
   end
 
   def create
