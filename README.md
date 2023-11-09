@@ -13,6 +13,25 @@ Moreover, Map method with marker functions was built by <strong>Javascript<img s
 </div>
 contributers by <a href="https://contrib.rocks">contrib.rocks</a>
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+When gems need updates
+```
+bundle install
+yarn install
+```
+
+Run Javascript in the local
+```
+yarn build --watch
+```
+
+When codes need to clean the seeds (in the seed.rb I added for delete the all data)
+```
+rails db:seed:replant
+```
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 <a href="https://guides.rubyonrails.org/active_storage_overview.html">Active Storage</a>
 uploading in a local disk-based storage
