@@ -5,4 +5,8 @@ class PagesController < ApplicationController
     @message = Message.new
     @chatroom = Chatroom.last
   end
+
+  def contact
+    
+  end
 end
