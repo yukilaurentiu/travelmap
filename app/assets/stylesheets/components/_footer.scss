@@ -9,24 +9,28 @@ section {
   background: $peach;
   color: white;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: space-around;
   padding: 20px 100px;
 }
 
-// .footer-distributed h3{
-//   font-size: 2.5 rem;
-//   margin: 0;
-// }
-
 .footer-distributed h2 span{
   color:  $dark-teal;
 }
 
-.footer-with {
+.footer-width {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; 
 }
 
 .footer-distributed .footer-links a{
@@ -36,6 +40,10 @@ section {
   font-size: 1.2rem;
   text-decoration: none;
   color:  inherit;
+  margin-bottom: 10px; 
+  &:hover {
+    color: $dark-teal;
+ }
 }
 
 .footer-distributed .footer-app-name{
