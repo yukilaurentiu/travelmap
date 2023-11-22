@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @chatroom = Chatroom.last
   end
 
-  def contact
+  def about
     
   end
 end
