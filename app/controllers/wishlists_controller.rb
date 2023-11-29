@@ -12,7 +12,7 @@ class WishlistsController < ApplicationController
       {
         lat: post.latitude,
         lng: post.longitude,
-        image_url: helpers.asset_url("logo-peach.png")
+        image_url: helpers.asset_url("logo-dark-teal.png")
       }
     end
   end

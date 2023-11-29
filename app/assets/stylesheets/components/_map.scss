@@ -20,6 +20,8 @@
   height: 100%;
 }
 
-.map-user-name {
-  font-family: 'Paytone One', sans-serif;
+#map-sticky {
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
