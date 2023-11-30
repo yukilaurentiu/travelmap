@@ -1,14 +1,14 @@
 <div class="d-flex">
   <div id="map-sticky" style="min-width: 60%; height: 44rem;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      data-controller="index-map"
+      data-index-map-markers-value="<%= @markers.to_json %>"
+      data-index-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-  <div class="none mt-4" style="width: 55%">
+  <div class="mt-4" style="min-width: 40%">
     <div>
-      <h1 class="text-center mt-3 mb-3 ml-2 title-font" >My wishlist 📌</h1>
+      <h1 class="text-center title-font mb-5" >My wishlist 📌</h1>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style="width: 100%">
       <% current_user.bookmarks.each do |bookmark| %>
        <div class="col-5">
         <div class="d-flex justify-content-center">
