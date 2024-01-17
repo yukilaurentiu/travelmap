@@ -17,7 +17,7 @@ puts "delete DB"
 # User.destroy_all
 
 User.create(username: "Dareos", email: "dareos@lewagon.com", password: "111111")
-# User.create(username: "Yuki", email: "yuki@lewagon.com", password: "222222")
+User.create(username: "Yuki", email: "yuki@lewagon.com", password: "222222")
 # User.create(username: "Sonja", email: "sonja@dlewagon.com", password: "333333")
 # User.create(username: "Jose", email: "jose@lewagon.com", password: "444444")
 
@@ -45,7 +45,7 @@ Post.create(
 )
 
 Post.create(
-  user_id: "1",
+  user_id: "2",
   city_id: "2",
   address: "Calle Azcona 46, 28028 Madrid Spain",
   title: "Highly recommended! `Los Montes de Galicia`",
