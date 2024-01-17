@@ -1,4 +1,4 @@
-<h2 class="text-center">Sign up</h2>
+<h2 class="text-center registration-subtitle ">Sign up</h2>
 
 <div class="container">
   <div class="row justify-content-center">
@@ -22,10 +22,13 @@
           <%= f.input :avatar, as: :file %>
           </div>
         <div class="form-actions">
-          <%= f.button :submit, "Sign up" %>
+          <%= f.button :submit, "Sign up", class: "btn-peach" %>
         </div>
       <% end %>
-      <%= render "devise/shared/links" %>
+      <div class="register-bt">
+        <%= render "devise/shared/links" %>
+        <%= link_to "Back", :back, class: "btn-teal-outline" %>
+      </div>
     </div>
   </div>
 </div>
