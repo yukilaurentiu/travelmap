@@ -1,62 +1,62 @@
-<div class="d-flex justify-content-center mt-3">
-  <div class="card-with-map rounded">
-    <div class="p-2" >
-      <% if @post.photos.present? %>
-        <% @post.photos.each do |photo| %>
-          <%= image_tag(url_for(photo), class: "modal-image") %>
+ <div class="mt-3 mb-5"> 
+  <div class="d-flex justify-content-center">
+    <div class="card-with-map rounded">
+      <div class="p-2" >
+        <% if @post.photos.present? %>
+          <% @post.photos.each do |photo| %>
+            <%= image_tag(url_for(photo), class: "modal-image") %>
+          <% end %>
+        <% else %>
+          <%= image_tag "/assets/sample_img.jpg", class: "modal-image" %>
         <% end %>
-      <% else %>
-        <%= image_tag "/assets/sample_img.jpg", class: "modal-image" %>
-      <% end %>
-      <div class="card-infos mt-3 d-flex justify-content-between">
-        <div>
-          <h2 class="mb-1"><%= @post.title %></h2>
-           <h3 class="mb-1 category"><%= @post.category %></h3>
-          <h4 class="mb-3"><%= @post.address %></h4>
-          <p><%= @post.description %></p>
-        </div>
-        <% if @post.user.avatar.present? %>
-              <%= image_tag(url_for(@post.user.avatar), class: "avatar")%>
-          <% else %>
-              <%= image_tag "avataricon.png", class: "avatar" %>
-          <% end %>  
-        <% unless @post.user == current_user %>
-          <div id="bookmark-icon">
-            <% bookmark_for_post = current_user.bookmarks.find_by(post: @post) %>
-            <% if bookmark_for_post %>
-              <%= button_to bookmark_path(bookmark_for_post), method: :delete do %>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark"
-                width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="#FF7E67" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2" />
-                </svg>
-              <% end %>
+        <div class="card-infos mt-3 d-flex justify-content-between">
+          <div>
+            <h2 class="mb-1"><%= @post.title %></h2>
+            <h3 class="mb-1 category"><%= @post.category %></h3>
+            <h4 class="mb-3"><%= @post.address %></h4>
+            <p><%= @post.description %></p>
+          </div>
+          <% if @post.user.avatar.present? %>
+                <%= image_tag(url_for(@post.user.avatar), class: "avatar")%>
             <% else %>
-              <%= button_to post_bookmarks_path(@post), method: :post do %>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark"
-                width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2" />
-                </svg>
+                <%= image_tag "avataricon.png", class: "avatar" %>
+            <% end %>  
+          <% unless @post.user == current_user %>
+            <div id="bookmark-icon">
+              <% bookmark_for_post = current_user.bookmarks.find_by(post: @post) %>
+              <% if bookmark_for_post %>
+                <%= button_to bookmark_path(bookmark_for_post), method: :delete do %>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark"
+                  width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="#FF7E67" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2" />
+                  </svg>
+                <% end %>
+              <% else %>
+                <%= button_to post_bookmarks_path(@post), method: :post do %>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark"
+                  width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2" />
+                  </svg>
+                <% end %>
               <% end %>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-      <div class="d-flex align-items-end flex-column">
-          <div class="p-2">
-            <% if policy(@post).edit? %>
-            <%= link_to icon('fa-solid', 'pen-to-square'), edit_post_path(@post)%>
-            <%= link_to icon('fa-solid', 'trash'), post_path(@post), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
-            <% end %>
-          </div>
+            </div>
+          <% end %>
         </div>
+        <div class="d-flex align-items-end flex-column">
+            <div class="p-2">
+              <% if policy(@post).edit? %>
+              <%= link_to icon('fa-solid', 'pen-to-square'), edit_post_path(@post)%>
+              <%= link_to icon('fa-solid', 'trash'), post_path(@post), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+              <% end %>
+            </div>
+          </div>
+      </div>
+    <div class="rounded" style="width: 80%;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-  <div class="rounded" style="width: 80%;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-
-  
 </div>
