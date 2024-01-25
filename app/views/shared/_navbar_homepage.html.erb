@@ -1,6 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-home fixed-top"
   data-controller="navbar"
   data-action="scroll@window->navbar#updateNavbar"
+  data-navbar-target="navbar"
+  data-logo-target="logo"
+  
 >
   <nav class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
@@ -22,23 +25,21 @@
 
       <ul class="navbar-nav">
         <% if user_signed_in? %>
-          <li class="nav-item">
-            <li class="nav-item nav-item-hp" title="Posts Worldwide">
+            <li class="nav-item-hp" title="Posts Worldwide">
               <%= link_to icon('fa-solid', 'earth-europe'), posts_path, class: "nav-link" %>
             </li>
-            <li class="nav-item nav-item-hp" title="New Post">
+            <li class="nav-item-hp" title="New Post">
               <%= link_to icon('fa-solid', 'pen'), new_post_path, class: "nav-link" %>
             </li>
-            <li class="nav-item nav-item-hp" title="My Map">
+            <li class="nav-item-hp" title="My Map">
               <%= link_to icon('fa-regular', 'map'), profile_path, class: "nav-link" %>
             </li>
-            <li class="nav-item nav-item-hp" title="My Wishlist">
+            <li class="nav-item-hp" title="My Wishlist">
               <%= link_to icon('fa-solid', 'bookmark'), wishlists_path, class: "nav-link" %>
             </li>
-            <li class="nav-item nav-item-hp" title="Events" id="last-nav-item">
+            <li class="nav-item-hp" title="Events" id="last-nav-item">
               <%= link_to icon('fa-regular', 'calendar'), events_path, class: "nav-link" %>
             </li>
-          </li>
           <li class="nav-item dropdown">
             <%= render(partial: "shared/avatar_profile") %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
