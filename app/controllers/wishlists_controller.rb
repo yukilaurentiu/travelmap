@@ -1,6 +1,6 @@
 class WishlistsController < ApplicationController
   def index
-    redirect_to root_path unless current_user
+    root_path unless current_user
     @wishlist = current_user.wishlist
     authorize @wishlist
     @posts = policy_scope(Post)

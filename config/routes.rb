@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get "about", to: "pages#about"
+  get 'logout', to: 'custom_sessions#logout'
   # Defines the root path route ("/")
   # root "articles#index"
+  
 end

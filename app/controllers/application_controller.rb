@@ -20,6 +20,8 @@ class ApplicationController < ActionController::Base
   # end
 
   def after_sign_out_path_for(resource_or_scope)
+    # redirect_to "https://google.com", allow_other_host: true
+    # raise "Intentional error in after_sign_out_path_for"
     root_path
   end
 

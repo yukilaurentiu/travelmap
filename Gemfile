@@ -5,7 +5,7 @@ ruby "3.1.2"
 
 # Added gems
 gem "pundit"
-gem "devise"
+gem "devise", ">= 4.9.3"
 gem "cloudinary"
 
 
