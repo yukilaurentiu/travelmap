@@ -22,8 +22,13 @@ yarn install
 ```
 Run Ruby on Rails 
 ```
-rails s
 rails server
+```
+(rails s also works)
+
+Stop running Ruby on rails
+```
+control + c
 ```
 
 Run Javascript in the local
