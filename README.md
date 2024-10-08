@@ -20,6 +20,16 @@ When gems need updates
 bundle install
 yarn install
 ```
+Run Ruby on Rails 
+```
+rails server
+```
+(rails s also works)
+
+Stop running Ruby on rails
+```
+control + c
+```
 
 Run Javascript in the local
 ```
