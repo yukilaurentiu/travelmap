@@ -16,46 +16,58 @@ puts "delete DB"
 # City.destroy_all
 # User.destroy_all
 
-User.create(username: "Dareos", email: "dareos@lewagon.com", password: "111111")
+User.create(username: "Phil", email: "Phil@lewagon.com", password: "111111")
 User.create(username: "Yuki", email: "yuki@lewagon.com", password: "222222")
-# User.create(username: "Sonja", email: "sonja@dlewagon.com", password: "333333")
+User.create(username: "Sonja", email: "sonja@dlewagon.com", password: "333333")
 # User.create(username: "Jose", email: "jose@lewagon.com", password: "444444")
 
-City.create([{ name: "London" }, { name: "Madrid" }, { name: "Berlin" }, { name: "Oslo" }])
+City.create([{ name: "London" }, { name: "Madrid" }, { name: "Berlin" }, { name: "Vienna" }])
 
 Post.create(
-  user_id: "1",
-  city_id: "1",
-  address: "Tower Bridge Rd, London SE1 2UP, United Kingdom",
-  title: "What a beautiful Landmark!",
-  category: "Best spots",
-  description: "This historic gem located in the heart of London is an absolute must-see. 
-                It's an iconic testament to the city's rich history, 
-                standing proudly as a symbol of its heritage. "
-)
-
-Post.create(
-  user_id: "1",
+  user_id: "2",
   city_id: "1",
   address: "Great Russell St, London WC1B 3DG, United Kingdom",
-  title: "Impressive museum!",
+  title: "Discover History at the British Museum",
   category: "Art&Culture",
-  description: "A very nice place to visit if you want to see various types of 
-                monuments from different countries and  from different Eras."
+  description: "The British Museum is a must-visit in London, offering incredible historical artifacts from ancient to modern times. 
+                Admission is free, but the museum is huge—so plan ahead to make the most of your visit."
 )
 
 Post.create(
   user_id: "2",
-  city_id: "2",
-  address: "Calle Azcona 46, 28028 Madrid Spain",
-  title: "Highly recommended! `Los Montes de Galicia`",
+  city_id: "1",
+  address: "Strand, London WC2R 0EZ, United Kingdom",
+  title: "Lovely afternoon tea in London!",
   category: "Restaurants",
-  description: "Food was amazing, service excellent and all around wonderful meal"
+  description: "We enjoyed a delightful high tea in the Thames Foyer at The Savoy, 
+                where the delicious sandwiches and charming ambiance made for a special experience. 
+                The exceptional service truly enhanced our time, making it a perfect way to spend a couple of hours in beautiful London."
 )
 
 Post.create(
   user_id: "1",
-  city_id: "3",
+  city_id: "2",
+  address: "Calle de Goya, 57A, Salamanca, 28001 Madrid, Spain",
+  title: "Great local foods! `La Casa del Abuelo GOYA`",
+  category: "Restaurants",
+  description: "We went here to try some local food and ordered garlic shrimp, it's called gambas al ajillo. 
+                It was so good and hot and spicy. We really loved the food and environment here."
+)
+
+Post.create(
+  user_id: "1",
+  city_id: "2",
+  address: "Plaza De San Miguel, S/N, 28005 Madrid Spain",
+  title: "Enjoyed street market, Mercado San Miguel!",
+  category: "Best spots",
+  description: "This was such a lovely surprise - make sure you want to eat something. 
+                It's in a wonderful building and showcases lots of delicious foods, 
+                all for buying and eating there by grabbing one of the stand up bars or stools and tables. "
+)
+
+Post.create(
+  user_id: "1",
+  city_id: "2",
   address: "Pariser Platz, 10117 Berlin, Germany",
   title: "iconic gate, Brandenburger Tor!",
   category: "Best spots",
@@ -65,20 +77,21 @@ Post.create(
 
 Post.create(
   user_id: "1",
-  city_id: "4",
-  address: "Bankplassen 1, 0151 Oslo, Norway",
-  title: "the oldest cafe, Engebret Cafe",
+  city_id: "3",
+  address: "Philharmoniker Str. 4, 1010 Vienna, Austria",
+  title: "The best Sacher Torte ever!",
   category: "Restaurants",
-  description: "A very Norwegian atmosphere with traditional food, very tasty fish soup and salmon, 
-                traditional appearance and calm atmosphere. "
+  description: "I highly recommend trying the original Sachertorte in Vienna—it's a must! 
+                I loved it and suggest booking in advance to ensure you get to enjoy this iconic dessert. "
 )
 
 Post.create(
   user_id: "1",
-  city_id: "3",
-  address: "Unter den Linden 2, 10117 Berlin, Germany",
-  title: "Deutsches Historisches Museum",
+  city_id: "2",
+  address: "East Side Gallery, Mühlenstraße, 10243 Berlin, Germany",
+  title: "Berlin's history",
   category: "Art&Culture",
-  description: "Great exhibition on commissioned art in Third Reich and after exploring continuance of purpose.
-                Awesome building! Original museum building is undergoing renovation."
+  description: "The East Side Gallery is a must-visit for any traveler looking 
+                to experience Berlin's vibrant culture and tumultuous past.
+                They are a powerful reminder of the Cold War and the importance of freedom."
 )
